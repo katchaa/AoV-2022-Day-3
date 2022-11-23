@@ -14,7 +14,7 @@ If you're up for a bonus challenge use the Vue transition component to transitio
 
 ## Example of a solution in action
 
-https://silly-horse-5344a8.netlify.app/
+https://papaya-caramel-13dd76.netlify.app/
 
 ## Author
 
