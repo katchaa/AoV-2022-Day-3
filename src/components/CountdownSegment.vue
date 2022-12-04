@@ -5,23 +5,27 @@ defineProps({
 })
 </script>
 <template>
-  <div class="segment text-center">
-    <div class="pt-10 overflow-hidden relative">
-      <span :key="number" class="numbers text-green absolute top-0 left-[50%]">{{ number }}</span>
+  <div class="flex flex-col items-center gap-2">
+    <div class="overflow-hidden w-20 h-10 relative">
+      <Transition name="segment" mode="out-in">
+        <span :key="number" class="text-green text-4xl absolute top-0 left-[50%] -translate-x-1/2">{{ number }}</span>
+      </Transition>
     </div>
-
-    <span class="label block pt-2">{{ label }}</span>
+    <label class="text-base">{{ label }}</label>
   </div>
 </template>
 <style>
-.segment {
-  width: 80px;
+.segment-enter-from {
+  opacity: 0;
 }
-.numbers {
-  transform: translateX(-50%);
-  font-size: 32px;
+
+.segment-leave-to {
+  opacity: 0;
 }
-.label {
-  font-size: 16px;
+
+.segment-enter-active,
+.segment-leave-active,
+.segment-move {
+  transition: all 0.4s ease-in;
 }
 </style>
